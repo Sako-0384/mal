@@ -4,6 +4,8 @@ def pr_str(el)
   return case el
   when MalSymbol
     el.val
+  when MalKeyword
+    el.val
   when MalInteger
     el.val
   when MalString

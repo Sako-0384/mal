@@ -108,6 +108,8 @@ def read_atom(reader)
     return MalTrue.new
   when /^false$/
     return MalFalse.new
+  when /^:/
+    return MalKeyword.new(token)
   else
     return MalSymbol.new(token)
   end

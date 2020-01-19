@@ -25,7 +25,7 @@ end
 class MalInteger < MalType
   attr_reader :val
   def initialize(val)
-    @val = val
+    @val = val.to_i
   end
 end
 
@@ -53,8 +53,8 @@ end
 
 class MalSymbol < MalType
   attr_reader :val
-  def initialize(symbol)
-    @val = symbol
+  def initialize(name)
+    @val = name.intern
   end
 end
 
